@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getMessaging, getToken } from "firebase/messaging";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCP5RSVk-y17ESxoKJuSlAV3rQ61ZmJeyk",
-  authDomain: "some-firebase-97dfc.firebaseapp.com",
-  projectId: "some-firebase-97dfc",
-  storageBucket: "some-firebase-97dfc.appspot.com",
-  messagingSenderId: "440905053097",
-  appId: "1:440905053097:web:b1dd7466968bac72470ab8",
-  measurementId: "G-27PVPDKWY8",
+  apiKey: "AIzaSyCeGR2888oD6mUvFDXEGhG0QLo8WMNDMAk",
+  authDomain: "bezonotification.firebaseapp.com",
+  databaseURL: "https://bezonotification-default-rtdb.firebaseio.com",
+  projectId: "bezonotification",
+  storageBucket: "bezonotification.appspot.com",
+  messagingSenderId: "819772866681",
+  appId: "1:819772866681:web:f75ce3096adebde47c14a8"
 };
 
 function requestPermission() {
@@ -21,7 +21,7 @@ function requestPermission() {
       const messaging = getMessaging(app);
       getToken(messaging, {
         vapidKey:
-          "BCKNSY0FAgDlbgevvqBGsXdadLiRCrFR1wbWXqFYgQJOV3jX8nTSHAQzXcB91c6GGlmFwCfCcxCUK_UxDL7nTLA",
+          "BGtZjtnhKwzzwbMwV47Ebb60VYQ0GD4YOxoxT4FXbq2gD7tkRADnpV6TWrSRHw680391xEJ8M78SMvi3Cx8TxQQ",
       }).then((currentToken) => {
         if (currentToken) {
           console.log("currentToken: ", currentToken);
